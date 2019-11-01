@@ -1,0 +1,74 @@
+    <div class="contain">
+
+
+      <img class="cover-picture" name="cover-image" src="assets/Pictures/7.jpg">
+      <div class="overlay"></div>
+      <div class="cover-info">
+        <div class="row">
+
+          <div class="col-md-3 col-xs-12">
+
+            <img src="assets/Pictures/myprofile.jpg" *ngIf="!previewUrl" class="thumb-round img-responsive">
+            <ng-container *ngIf="isProfile">
+              <img *ngIf="previewUrl" [src]="previewUrl" class="thumb-round img-responsive" />
+              <div class="mb-3" *ngIf="uploadedFilePath">
+                {{uploadedFilePath}}
+              </div>
+              <input *ngIf="!previewUrl" name="profile-image" type="file" id="profile_image" #imageInput
+                (change)="onFileChanged($event)">
+              <button *ngIf="previewUrl" (click)="cancel()" style="margin:auto;display:block"
+                class="btn btn-primary">cancel</button>
+            </ng-container>
+
+
+
+          </div>
+          <div class="col-md-8 col-xs-12">
+            <div>
+              <h3 class="person-name">Mostafa Ahmed El-Halawany</h3>
+              <button class="btn btn-primary pull-right" *ngIf="isProfile">Edit Profile</button>
+            </div>
+            <p class="profile-city"><i class="fa fa-map-marker" aria-hidden="true"></i> Giza</p>
+            <p class="profile-sessions"><i class="fa fa-camera" aria-hidden="true"></i> Wedding,portrait , travel ,
+              and
+              journalism</p>
+            <div class="profile-descriptiondiv" style="width:500px;">
+              <p id="profile-description"> Being UNIQUE is what makes us different. Therefore, I decided to work by my
+                own
+                style, representing creativity, talent, technical skills and finally portraying stories in pictures;
+                believing in that’s what it takes to make a photograph conveys what a thousands words can’t assets My
+                only
+                passion is taking pictures, so I knew this is what I wanted to do for the rest of my life! *also I only
+                feel
+                comfortable when my camera and I hit the roads. * The hobby then has turned into a career!*</p>
+            </div>
+            <input type="file" id="cover_image" *ngIf="isProfile">
+            <button class="btn btn-primary" *ngIf="isLoggedIn && !isProfile" (click)="openDialog()">Request photo
+              session</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="ImageGrid">
+      <a data-fancybox="gallery" href="assets/Pictures/1.jpg"><img src="assets/Pictures/1.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/2.jpg"><img src="assets/Pictures/2.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/3.jpg"><img src="assets/Pictures/3.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/5.jpg"><img src="assets/Pictures/5.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/8.jpg"><img src="assets/Pictures/8.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/6.jpg"><img src="assets/Pictures/6.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/7.jpg"><img src="assets/Pictures/7.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/8.jpg"><img src="assets/Pictures/8.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/11.jpg"><img src="assets/Pictures/11.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/8.jpg"><img src="assets/Pictures/8.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/11.jpg"><img src="assets/Pictures/11.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/7.jpg"><img src="assets/Pictures/7.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/8.jpg"><img src="assets/Pictures/8.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/11.jpg"><img src="assets/Pictures/11.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/7.jpg"><img src="assets/Pictures/7.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/8.jpg"><img src="assets/Pictures/8.jpg" alt=""></a>
+      <a data-fancybox="gallery" href="assets/Pictures/11.jpg"><img src="assets/Pictures/11.jpg" alt=""></a>
+
+    </div>

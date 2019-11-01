@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Login
+    <button  class="btn btn-danger pull-right" (click)="onCancel()">X</button>
+</h1>
+<div mat-dialog-content>
+  <app-login (close)="onCancel()"></app-login>
+   <!-- <div class="clearfix" mat-dialog-actions>
+     <button class="cancelbtn" (click)="onCancel()">Cancel</button>
+     <button type="submit" class="requestbtn" [mat-dialog-close]="'Hello'">Login</button>
+   </div> -->
+</div>

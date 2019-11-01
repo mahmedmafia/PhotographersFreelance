@@ -1,0 +1,61 @@
+<!-- The Modal -->
+<h1 mat-dialog-title>Request Session</h1>
+<div mat-dialog-content>
+  <!-- Modal content -->
+  <form class="container">
+    <div class='form-group'>
+      <label><b>Photo session title</b></label>
+      <input type="text" placeholder="Enter the photo session title" name="Title" required class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+      <label><b>Category</b></label>
+      <select name="Category" required class="form-control">
+        <option value="all">All</option>
+        <option value="wedding">Wedding</option>
+        <option value="portrait">Portrait</option>
+        <option value="commercial">Commercial</option>
+        <option value="journalism">Journalism</option>
+        <option value="portrait">Portrait</option>
+        <option value="travel">Travel</option>
+        <option value="fa">Fine Art</option>
+        <option value="makeup">Makeup</option>
+        <option value="fashion">Fashion</option>
+      </select>
+    </div>
+
+
+    <div class='form-group'>
+      <label><b>Description about the photo session</b></label><br>
+      <input type="textarea" placeholder="Enter the description here" name="Description" rows="4" cols="40" required
+        class="form-control"><br>
+    </div>
+    <div class="form-group">
+      <label><b>The price you can afford the photographer for the photo session</b></label>
+      <input type="text" placeholder="Enter the price" name="Price" class="form-control">
+
+    </div>
+    <div class="form-group">
+      <label><b>Mobile Number</b></label>
+      <input type="tel" placeholder="Enter mobile number" name="phone" required class="form-control">
+
+    </div>
+    <div class="form-group">
+      <label><b>Location</b></label>
+      <input type="text" placeholder="Enter the location of the photo session" name="PSlocation" required
+        class="form-control">
+
+    </div>
+    <div class="form-group">
+      <label><b>Date of photo session</b></label>
+      <input type="date" name="DOPS">
+
+    </div>
+
+
+    <div class="clearfix" mat-dialog-actions>
+      <button class="cancelbtn" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="requestbtn" [mat-dialog-close]="'Hello'">Request</button>
+    </div>
+  </form> <!-- End Form modal -->
+</div><!-- End Div modal -->

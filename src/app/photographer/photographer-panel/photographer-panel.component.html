@@ -1,0 +1,22 @@
+<div class="panel">
+   <figure>
+     <img class="aside1img" src="assets/Pictures/rate/landscape.jpg">
+   </figure>
+   <!--content of every photographer-->
+   <p>Name:{{photographer.name}}</p>
+   <p>City:{{photographer.address}}</p>
+   <span>Categories:</span>
+   <ul class="dashed list-group" *ngFor="let category of photographer.categories">
+       <li class="list-group-item">{{category}}</li>
+     <!-- <li class="list-group-item">Travel 14</li> -->
+     <!-- <li>Portrait 6</li>
+     <li>Journalism 8</li>
+     <li>Makeup 2</li>
+     <li>Wedding 5</li> -->
+   </ul>
+   <p>Rate:7.6</p>
+   <div class="centerBtn">
+   <a class="btn" id="panelBtn" 
+   [routerLink]="[ '/photographers/'+photographer.id+'/portofolio']">Portfolio</a>
+   </div>
+ </div>

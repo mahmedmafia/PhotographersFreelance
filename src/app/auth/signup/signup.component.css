@@ -1,0 +1,22 @@
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  padding:20px;
+  /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+.disabled {
+  background-color: #015044;
+}
+.ng-valid{
+  border-left: 5px solid #42A948;
+}

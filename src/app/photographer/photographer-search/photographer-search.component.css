@@ -1,0 +1,92 @@
+input[type=text],select
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#srchQry{
+    padding:20px 10px;
+    font-size: 1.2em;
+}
+.srchbtn{
+    margin-top: 4px;
+}
+.srchbtn input{
+    padding-top:10px;
+    padding-bottom: 10px;
+
+}
+.selects{
+    width:15%;
+    display: inline-block;
+    margin-right: 5%;
+}
+.fields p{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom:5px;
+}
+.selects p
+{
+    font-size: 1.1em;
+    font-weight: bold;
+ }
+
+.Mainsearch {
+  width: 100%;
+  padding: 50px 0;
+  margin-left: 5%;
+}
+/*
+.container {
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.Mainsearch form {
+
+  margin-top: -60px;
+  margin-bottom: -30px;
+  padding: 0;
+  text-align: center;
+}
+
+.fields {
+
+  width: 580px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.leftp {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #4a4a4a;
+  float: left !important;
+}
+
+.Mainsearch .selects {
+
+  display: inline-block;
+  width: 150px;
+  margin-right: 20px;
+  float: left;
+  margin-top: 15px;
+}
+
+.Mainsearch .selects p {
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1em;
+  color: #4a4a4a;
+  float: left !important;
+} */

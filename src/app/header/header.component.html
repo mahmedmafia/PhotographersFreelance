@@ -1,0 +1,156 @@
+<nav class="navbar navbar-fixed-top my-navbar">
+  <div class="container-fluid row">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span></button>
+      <a class="navbar-brand" id="Logo" [routerLink]="['/home']">
+        <img src="assets/Pictures/Brand.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav col-md-4">
+        <li routerLinkActive="active"><a class="">Browse</a></li>
+        <li routerLinkActive="active"><a class="">About</a></li>
+        <li routerLinkActive="active"><a class="">Contact</a></li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/photographers/portofolio']">Profile</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-left col-md-4 col-sm-12">
+        <li>
+          <form class="row">
+            <div class="form-group col-md-10">
+              <span class="icon"><i class="fa fa-search"></i></span>
+              <input type="text" placeholder="Search Photographer" class="form-control" style="display: inline;">
+            </div>
+            <input type="submit" value="Search" class="btn btn-default col-md-2" style="display: inline;">
+          </form>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right col-md-2 col-sm-2">
+        <ng-container *ngIf="!isLogged">
+        <!-- <li routerLinkActive="active"><a [routerLink]="['/login']" (click)="openDialog()">Login</a></li> -->
+          <li routerLinkActive="active"><a (click)="openDialog()" [queryParams]="{l:'h'}">Login</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/signup']">Signup</a></li>
+        </ng-container>
+        <ng-container *ngIf="isLogged">
+       <li routerLinkactive="active"><a>Hello {{loggedUser.name}}</a></li>
+       <li><a class="btn" (click)="Logout()">Logout</a></li>
+        </ng-container>
+        
+     
+
+
+        <!-- <li><a class="">SignOut</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- <a ID="Logo" href=""><img src="assets/Pictures/Brand.png"></a> -->
+<!-- 
+  <ul>
+    <li><a class="navbarA" href="">Browse</a></li>
+    <li class="dropdown">
+      <a href="" class="dropnav navbarA">How to use</a>
+    </li>
+    <li><a href="" class="navbarA">About</a></li>
+    <li><a href="" class="navbarA" style="margin-right:20px;">Contact</a></li>
+-->
+<!-- nav bar search -->
+<!--
+    <li>
+      <div class="box">
+        <div class="container-1">
+          <span class="icon"><i class="fa fa-search"></i></span>
+          <form>
+            <input style="border-top-left-radius:8px;border-bottom-left-radius:8px;" type="search" id="search"
+              placeholder="Search a photographer" />
+            <input type="submit" value="Search"
+              style="display:inline; cursor:pointer; padding:12.5px; margin-left:1px; border-bottom-right-radius:8px; border-top-right-radius:8px; border:none; background-color:white; color:#00a087;">
+          </form>
+        </div>
+      </div>
+    </li>
+
+    <li style="float:right;">
+      <button class="navbarA  " onclick="document.getElementById('id02').style.display='block'" style="width:auto;font-weight:bold;     text-align: center;
+    padding: 18px 16px; font-size:100%" id="signupbtn">Sign Up</button>
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="container">
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="fname" required>
+
+            <label><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+            <label><b>Mobile Number</b></label>
+            <input type="tel" placeholder="Enter Mobile Number" name="phone" required>
+
+            <label><b>City</b></label>
+            <select name="city">
+              <option value="Cairo">Cairo</option>
+              <option value="Giza">Giza</option>
+              <option value="Alex">Alex</option>
+              <option value="Menoufia">Menoufia</option>
+              <option value="Helwan">Helwan</option>
+              <option value="Matrouh">Marsa Matrouh</option>
+              <option value="Benisuef">Beni Suef</option>
+              <option value="Tanta">Tanta</option>
+            </select>
+            <label><b>User type</b></label><br><br>
+            <input type="radio" name="ustype" value="Photographer" required> Photographer
+            <input type="radio" name="ustype" value="Hirer"> Hirer<br><br><br>
+
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form> 
+      </div>
+    </li> 
+
+    <li style="float:right;"><button style="font-size:100%; font-weight:bold;width:auto;"
+        onclick="document.getElementById('id01').style.display='block'" id="loginbtn">Login</button>
+      <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="container">
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+                      <label><b>User type</b></label><br>
+                      <input type="radio" name="ustype" value="Photographer" required> Photographer
+                      <input type="radio" name="ustype" value="Hirer"> Hirer<br>
+            <button type="submit" class="loginbtn">Login</button>
+          </div>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+    </li>
+  </ul>
+</nav> -->
+<!-- end nav -->
